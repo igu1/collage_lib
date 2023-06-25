@@ -1,2 +1,4 @@
 /Pipfile
 /Pipfile.lock
+/library/migrations/
+db.sqlite3
