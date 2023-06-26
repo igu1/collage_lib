@@ -1,10 +1,18 @@
-from django.shortcuts import render
-
+from django.shortcuts import render, redirect
+from .models import *
 def index(request):
     return render(request, "index.html", {})
 
 
 def contact(request):
+    if request.method == "POST":
+        form = MessageForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Your message has been sent.")
+        else:
+            messages.error(request, "Invalid Message")
+        return redirect('contact')
     return render(request, "contact.html", {})
 
 
