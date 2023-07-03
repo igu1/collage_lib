@@ -156,3 +156,9 @@ JAZZMIN_UI_TWEAKS = {
 
 # JET_PROJECT = 'collage_library'
 # JET_TOKEN = '9faaa670-8508-4734-8fb9-171f22547458'
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'eesaard@gmail.com'
+EMAIL_HOST_PASSWORD = 'qbfdmicowcujwcaz'
