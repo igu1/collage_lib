@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-ym88x)bzx(0t@b7qkxc1#*8e-52nbj)+$#6x+dijomjs)6fdip
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', '*']
 
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'library',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -152,3 +153,6 @@ JAZZMIN_SETTINGS = {
 JAZZMIN_UI_TWEAKS = {
     "theme": "lux",
 }
+
+# JET_PROJECT = 'collage_library'
+# JET_TOKEN = '9faaa670-8508-4734-8fb9-171f22547458'
