@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+
+<main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs" data-aos="fade-in">
+      <div class="container">
+        <h2>Gallery</h2>
+        <p>Sullamussalam Science College Areekode</p>
+      </div>
+    </div>
+    <section class="gallary" id="gallary" >
+        <div class="container">
+            <!-- Gallery -->
+  <div class="row">
+    <div class="col-lg-4 col-md-12 mb-4 mb-lg-0" data-aos="fade-right" data-aos-delay="100">
+    <a href="{% static 'assets/img/gallery/IMG_3391.jpg' %}">
+      <img
+        src="{% static 'assets/img/gallery/IMG_3391.jpg' %}"
+        class="w-100 shadow-1-strong rounded mb-4"
+        alt="Boat on Calm Water"
+      />
+    </a>
+    </a href="{% static 'assets/img/gallery/p2.jpg' %}">
+      <img
+        src="{% static 'assets/img/gallery/p2.jpg' %}"
+        class="w-100 shadow-1-strong rounded mb-4"
+        alt="Wintry Mountain Landscape"
+      />
+    </a>
+    </div>
+  
+    <div class="col-lg-4 mb-4 mb-lg-0" data-aos="zoom-in" data-aos-delay="100">
+      <a href="{% static 'assets/img/gallery/p4.jpg' %}">
+      <img
+        src="{% static 'assets/img/gallery/p4.jpg' %}"
+        class="w-100 shadow-1-strong rounded mb-4"
+        alt="Mountains in the Clouds"
+      />
+     </a>
+     <a href="{% static 'assets/img/gallery/IMG_3412.jpg' %}">
+      <img
+        src="{% static 'assets/img/gallery/IMG_3412.jpg' %}"
+        class="w-100 shadow-1-strong rounded mb-4"
+        alt="Boat on Calm Water"
+      />
+     </a>
+    </div>
+  
+    <div class="col-lg-4 mb-4 mb-lg-0" data-aos="fade-left" data-aos-delay="100">
+      <a href="{% static 'assets/img/gallery/IMG_3411.jpg' %}">
+      <img
+        src="{% static 'assets/img/gallery/IMG_3411.jpg' %}"
+        class="w-100 shadow-1-strong rounded mb-4"
+        alt="Waves at Sea"
+      />
+    </a>
+    <a href="{% static 'assets/img/gallery/IMG_3386.jpg' %}">
+      <img
+        src="{% static 'assets/img/gallery/IMG_3386.jpg' %}"
+        class="w-100 shadow-1-strong rounded mb-4"
+        alt="Yosemite National Park"
+      />
+    </a>
+    </div>
+  </div>
+  <div class="row" data-aos="zoom-in" data-aos-delay="100">
+    <a href="{% static 'assets/img/gallery/IMG_3410.jpg' %}"  data-toggle="lightbox" data-gallery="gallery"
+      class="col-md-4">
+      <img src="{% static 'assets/img/gallery/IMG_3410.jpg' %}" class="img-fluid rounded">
+    </a>
+    <a href="{% static 'assets/img/gallery/IMG_3408.jpg' %}" data-toggle="lightbox" data-gallery="gallery"
+      class="col-md-4">
+      <img src="{% static 'assets/img/gallery/IMG_3408.jpg' %}" class="img-fluid rounded">
+    </a>
+    <a href="{% static 'assets/img/gallery/IMG_3406.jpg' %}" data-toggle="lightbox" data-gallery="gallery"
+      class="col-md-4">
+      <img src="{% static 'assets/img/gallery/IMG_3407.jpg' %}" class="img-fluid rounded">
+    </a>
+  </div> 
+ 
+  <!-- Gallery -->
+
+          </div>
+    </section>
+
+</main>
+
+{% endblock content %}

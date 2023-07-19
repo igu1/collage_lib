@@ -391,11 +391,11 @@ h6 {
 #hero {
   width: 100%;
   height: 80vh;
-  background: url("../img/lib_hero_image.jpg") top center;
+  background: url("../img/shelf.jpg") top center;
   background-size: cover;
   position: relative;
 }
-
+/* 
 #hero:before {
   content: "";
   background: rgba(0, 0, 0, 0.4);
@@ -404,7 +404,7 @@ h6 {
   top: 0;
   left: 0;
   right: 0;
-}
+} */
 
 #hero .container {
   padding-top: 72px;
@@ -652,11 +652,12 @@ section {
 
 .why-us .icon-boxes .icon-box {
   text-align: center;
-  background: #fff;
   padding: 40px 30px;
   width: 100%;
   border: 1px solid #eef0ef;
+  
 }
+
 
 .why-us .icon-boxes .icon-box i {
   font-size: 32px;
@@ -1556,4 +1557,17 @@ section {
   background: #3ac162;
   color: #fff;
   text-decoration: none;
+}
+
+
+
+
+/* *****customising****** */
+
+
+@media (max-width:1000px){
+  .firstsection{
+      padding-top: 40px;
+  }
+  
 }

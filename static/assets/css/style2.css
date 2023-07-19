@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Lumanosimo&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.service_head{
+    width: max-content;
+    color:#5fcf80;
+    font-weight: bold;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.member_outer{
+    font-size: 25px;
+    font-family: "Lumanosimo";
+    height: auto;
+}
+.member_outer i{
+    font-size: 30px;
+    color: #5fcf80;
+}
+.member_bttn{
+    position: absolute;
+    bottom: 10px;
+    right: 10%;
+    background-color: #5fcf80;
+    color: white;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: none;
+}
+.gallery_bttn{
+    background-color: #5fcf80;
+    color: white;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: none;
+    margin: auto;
+    margin: 15px 0px;
+    margin-right: 0px;
+}
+.gallery_bttn:hover{
+    background-color: white;
+    border: solid 1px #5fcf80;
+    color: #5fcf80;
+}
+.btn_outer{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+.rules_li{
+    margin: 10px 0px;
+}
+.gallary img{
+    margin: 15px 0px;
+}
+@media (max-width: 460px) {
+    #hero .btn-get-started{
+    display: none;
+   } 
+}

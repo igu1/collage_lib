@@ -4,26 +4,74 @@
 
 {% block content %}
 
-<section id="hero" class="d-flex justify-content-center align-items-center">
-  <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
-    <h1>Sullamussalam Scince College,<br>Library</h1>
+<section id="hero" class="d-flex justify-content-center align-items-center firstsection" style=" background: none;">
+  <div class=" position-relative" >
+    <video width="100%" height="100%" playsinline autoplay muted  loop poster="{% static 'assets/img/cover_img2.jpg' %}">
+      <source src="{% static 'assets/img/landing_vid.mp4' %}" type="video/mp4" >
+      <source src="{% static 'assets/img/landing_vid.ogg' %}" type="video/ogg">
+    </video>
+    <div class="sullamcontent"data-aos="zoom-in" data-aos-delay="100">
+    <h1>Sullamussalam Science College<br>Library</h1>
     <h2>Discover the magic of books at our library, where imagination knows no bounds</h2>
-    <a href="courses.html" class="btn-get-started">Go To OPAC</a>
+    <a href="#about" class="btn-get-started">Explore</a>
+    </div>
   </div>
+  <style>
+    #hero{
+      height: 100vh;
+    }
+    .sullamcontent{
+      position: absolute;
+      top: 40%;
+      left: 5%;
+    }
+    
+    @media (max-width: 768px) {
+    #hero {
+      height: max-content;
+    }
+  
+    #hero h1 {
+      font-size: 20px;
+      line-height: 36px;
+    }
+  
+    #hero h2 {
+      font-size: 15px;
+      line-height: 24px;
+    }
+    #hero .btn-get-started {
+      font-size: 10px;
+    }
+    
+    .sullamcontent{
+      top: 20%;
+    }
+    }
+    @media (max-width: 400px) {
+        #hero h1{
+            font-size: 16px;
+        }
+        #hero h2{
+            font-size: 12px;
+        }
+    }
+   
+  
+    </style>
 </section>
-
 <main id="main">
 
   <!-- ======= About Section ======= -->
-  <section id="about" class="about">
-    <div class="container" data-aos="fade-up">
+  <section id="about" class="about" >
+    <div class="container" >
 
       <div class="row">
-        <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-          <img src="{% static 'assets/img/lib_hero_image.jpg' %}" class="img-fluid" alt="">
+        <div class="col-lg-6 order-1 order-lg-2" >
+          <img src="{% static 'assets/img/bookshelf.jpg' %}" class="img-fluid" alt="">
         </div>
         <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-          <h3>History Of Sullamussalam Science College Library</h3>
+          <h3>Sullamussalam Science College Library</h3>
           <hr>
           <p class="fst-italic">
             The college library, started 1996, situated in the central part of the campus is one among fully automated
@@ -54,7 +102,7 @@
   </section><!-- End About Section -->
 
   <!-- ======= Counts Section ======= -->
-  <section id="counts" class="counts section-bg">
+  <section id="counts" class="counts section-bg" data-aos="zoom-in-up">
     <div class="container">
 
       <div class="row counters">
@@ -82,86 +130,88 @@
   </section><!-- End Counts Section -->
 
   <!-- ======= Why Us Section ======= -->
-  <section id="why-us" class="why-us">
+  <section id="why-us" class="why-us service_section">
     <div class="container" data-aos="fade-up">
 
       <div class="row">
-        <div class="col-lg-4 d-flex align-items-stretch">
-          <div class="content">
-            <h3>Why Choose Mentor?</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Duis aute irure dolor in reprehenderit
-              Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.
-            </p>
-            <div class="text-center">
-              <a href="about.html" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-8 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+        <div class="col-lg-12 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
           <div class="icon-boxes d-flex flex-column justify-content-center">
             <div class="row">
-              <div class="col-xl-4 d-flex align-items-stretch">
-                <div class="icon-box mt-4 mt-xl-0">
+              <div  class="col-lg-12"><h1 class="service_head">Services</h1></div>
+              <div class="col-xl-3 d-flex align-items-stretch">
+                <div class="icon-box mt-4 mt-xl-0" style="border: solid 1px #5fcf80;">
                   <i class="bx bx-receipt"></i>
-                  <h4>Corporis voluptates sit</h4>
-                  <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                  <h4>Career guidance corner</h4>
+                  <p >The college has set up a separate section in library exclusively for students preparing for competitive examinations like Civil Service UGC-NET....</p>
                 </div>
               </div>
-              <div class="col-xl-4 d-flex align-items-stretch">
-                <div class="icon-box mt-4 mt-xl-0">
+              <div class="col-xl-3 d-flex align-items-stretch">
+                <div class="icon-box mt-4 mt-xl-0 " style="border: solid 1px #5fcf80;">
                   <i class="bx bx-cube-alt"></i>
-                  <h4>Ullamco laboris ladore pan</h4>
-                  <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                  <h4>E-resource centre</h4>
+                  <p>Access to National Library and Information Services Infrastructure for Scholarly Content (NLIST) resources is available using the username and password.
+                  </p>
                 </div>
               </div>
-              <div class="col-xl-4 d-flex align-items-stretch">
-                <div class="icon-box mt-4 mt-xl-0">
+              <div class="col-xl-3 d-flex align-items-stretch">
+                <div class="icon-box mt-4 mt-xl-0" style="border: solid 1px #5fcf80;">
                   <i class="bx bx-images"></i>
-                  <h4>Labore consequatur</h4>
-                  <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                  <h4>Plagiarism checker</h4>
+                  <p>The college library has the facility to detect plagiarism using the software URKUND.</p>
+                </div>
+              </div>
+              <div class="col-xl-3 d-flex align-items-stretch">
+                <div class="icon-box mt-4 mt-xl-0" style="border: solid 1px #5fcf80;">
+                  <i class="bx bx-images"></i>
+                  <h4>Reprographic service</h4>
+                  <p>A reprographic centre is functioning inside the library. This facility intended for copying various library resources and other outside resources.
+                    </p>
                 </div>
               </div>
             </div>
           </div><!-- End .content-->
         </div>
+        <div class="col-lg-12  btn_outer"><a href="{% url 'service' %}"><button class="gallery_bttn">View more</button</a></div>
       </div>
     </div>
   </section>
+  
 
+
+  
   <section class="gallary" id="gallary">
 
-    <div class="container">
-      <h1>Gallery</h1>
+    <div class="container"data-aos="zoom-in" data-aos-delay="100">
+      <h1 style="color: #5fcf80; font-weight: bold;">Gallery</h1>
       <hr>
       <div class="row">
-        <a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox" data-gallery="gallery"
+        <a href="{% static 'assets/img/gallery/IMG_3415.jpg' %}"  data-toggle="lightbox" data-gallery="gallery"
           class="col-md-4">
-          <img src="https://unsplash.it/600.jpg?image=251" class="img-fluid rounded">
+          <img src="{% static 'assets/img/gallery/IMG_3415.jpg' %}" class="img-fluid rounded">
         </a>
-        <a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox" data-gallery="gallery"
+        <a href="{% static 'assets/img/gallery/IMG_3399.jpg' %}" data-toggle="lightbox" data-gallery="gallery"
           class="col-md-4">
-          <img src="https://unsplash.it/600.jpg?image=252" class="img-fluid rounded">
+          <img src="{% static 'assets/img/gallery/IMG_3399.jpg' %}" class="img-fluid rounded">
         </a>
-        <a href="https://unsplash.it/1200/768.jpg?image=253" data-toggle="lightbox" data-gallery="gallery"
+        <a href="{% static 'assets/img/gallery/IMG_3400.jpg' %}" data-toggle="lightbox" data-gallery="gallery"
           class="col-md-4">
-          <img src="https://unsplash.it/600.jpg?image=253" class="img-fluid rounded">
+          <img src="{% static 'assets/img/gallery/IMG_3400.jpg' %}" class="img-fluid rounded">
         </a>
       </div>
       <div class="row">
-        <a href="https://unsplash.it/1200/768.jpg?image=254" data-toggle="lightbox" data-gallery="gallery"
+        <a href="{% static 'assets/img/gallery/IMG_3401.JPG' %}" data-toggle="lightbox" data-gallery="gallery"
           class="col-md-4">
-          <img src="https://unsplash.it/600.jpg?image=254" class="img-fluid rounded">
+          <img src="{% static 'assets/img/gallery/IMG_3401.JPG' %}" class="img-fluid rounded">
         </a>
-        <a href="https://unsplash.it/1200/768.jpg?image=255" data-toggle="lightbox" data-gallery="gallery"
+        <a href="{% static 'assets/img/gallery/IMG_3402.jpg' %}" data-toggle="lightbox" data-gallery="gallery"
           class="col-md-4">
-          <img src="https://unsplash.it/600.jpg?image=255" class="img-fluid rounded">
+          <img src="{% static 'assets/img/gallery/IMG_3402.jpg' %}" class="img-fluid rounded">
         </a>
-        <a href="https://unsplash.it/1200/768.jpg?image=256" data-toggle="lightbox" data-gallery="gallery"
+        <a href="{% static 'assets/img/gallery/IMG_3404.jpg' %}" data-toggle="lightbox" data-gallery="gallery"
           class="col-md-4">
-          <img src="https://unsplash.it/600.jpg?image=256" class="img-fluid rounded">
+          <img src="{% static 'assets/img/gallery/IMG_3404.jpg' %}" class="img-fluid rounded">
         </a>
+        <div class="col-lg-12  btn_outer"><a href="{% url 'gallery' %}"><button class="gallery_bttn">View more</button></a></div>
       </div>
     </div>
     <script>
@@ -176,53 +226,26 @@
       }
     </style>
   </section>
-
-
   <section id="trainers" class="trainers">
     <div class="container" data-aos="fade-up">
-
-      <div class="row" data-aos="zoom-in" data-aos-delay="100">
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-          <div class="member">
-            <img src="{% static 'assets/img/trainers/trainer-1.jpg' %}" class="img-fluid" alt="">
+      <div class="row" data-aos="zoom-in" data-aos-delay="100" style="display: flex; flex-direction: row;">
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch justify-content-center" style="border-top: solid 2px #5fcf80;">
+          <div class="member" style="margin-top: 30px;">
+            <img src="{% static 'assets/img/trainers/abdulkader.jpg' %}" class="img-fluid" alt="">
             <div class="member-content">
               <h4>ABDUL KADER KM </h4>
               <span>Librarian</span>
             </div>
           </div>
         </div>
-
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-          <div class="member">
-            <img src="{% static 'assets/img/trainers/trainer-2.jpg' %}" class="img-fluid" alt="">
-            <div class="member-content">
-              <h4>DEEPA NP</h4>
-              <span>Library Attender (On Contract)
-              </span>
-            </div>
+        <div class="col-lg-9 c0l-md-6 d-flex justify-content-center align-items-center" style="border-bottom: solid 2px #5fcf80;">
+          <div class="member_outer">
+            <i class="fa-sharp fa-solid fa-quote-left"></i>
+            <p style="margin-left: 30px; font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut impedit tempore veritatis ut nam ullam.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut impedit tempore veritatis ut nam ullam </p>
+            <i class="fa-sharp fa-solid fa-quote-right" style="width: max-content; margin-left: 100%;"></i>
           </div>
         </div>
-
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-          <div class="member">
-            <img src="{% static 'assets/img/trainers/trainer-3.jpg' %}" class="img-fluid" alt="">
-            <div class="member-content">
-              <h4>RIZVAN KOZHISSERI</h4>
-              <span>Library Assistant</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-          <div class="member">
-            <img src="{% static 'assets/img/trainers/trainer-3.jpg' %}" class="img-fluid" alt="">
-            <div class="member-content">
-              <h4>SAFNA KT</h4>
-              <span>Libarary Attender (On Contract)</span>
-            </div>
-          </div>
-        </div>
-
+        <div class="col-lg-12  btn_outer"><a href="{% url 'members' %}"><button class="gallery_bttn" >View more</button></a></div>
       </div>
 
     </div>

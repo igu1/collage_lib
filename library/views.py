@@ -18,3 +18,12 @@ def contact(request):
 
 def about(request):
     return render(request, "about.html", {})
+
+def service(request):
+    return render(request, "service.html", {})
+
+def gallery(request):
+    return render(request, "gallery.html", {})
+
+def members(request):
+    return render(request, "members.html", {})
