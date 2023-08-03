@@ -60,8 +60,19 @@
 .gallary img{
     margin: 15px 0px;
 }
+.gallery_img img{
+    width: 100%;
+    height: 200px;
+}
 @media (max-width: 460px) {
     #hero .btn-get-started{
     display: none;
    } 
+   .counts .counters span{
+    font-size: 30px;
+   }
+   .ab_img{
+    display: flex;
+    justify-content: center;
+   }
 }

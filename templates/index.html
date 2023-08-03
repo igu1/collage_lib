@@ -127,7 +127,18 @@
       </div>
 
     </div>
-  </section><!-- End Counts Section -->
+  </section>
+  <style>
+    @media (max-width: 460px) {
+   
+   .counts .counters span{
+    font-size: 30px;
+   }
+}
+
+  </style>
+  
+  <!-- End Counts Section -->
 
   <!-- ======= Why Us Section ======= -->
   <section id="why-us" class="why-us service_section">
@@ -162,7 +173,7 @@
               </div>
               <div class="col-xl-3 d-flex align-items-stretch">
                 <div class="icon-box mt-4 mt-xl-0" style="border: solid 1px #5fcf80;">
-                  <i class="bx bx-images"></i>
+                  <i class="fa-solid fa-gear"></i>
                   <h4>Reprographic service</h4>
                   <p>A reprographic centre is functioning inside the library. This facility intended for copying various library resources and other outside resources.
                     </p>
@@ -182,9 +193,9 @@
   <section class="gallary" id="gallary">
 
     <div class="container"data-aos="zoom-in" data-aos-delay="100">
-      <h1 style="color: #5fcf80; font-weight: bold;">Gallery</h1>
+      <h1 style="color: #5fcf80; font-weight: bold;" class="gallery_head">Gallery</h1>
       <hr>
-      <div class="row">
+      <div class="row gallary_img">
         <a href="{% static 'assets/img/gallery/IMG_3415.jpg' %}"  data-toggle="lightbox" data-gallery="gallery"
           class="col-md-4">
           <img src="{% static 'assets/img/gallery/IMG_3415.jpg' %}" class="img-fluid rounded">
@@ -224,6 +235,14 @@
       .row {
         margin: 15px;
       }
+      @media (max-width: 460px) {
+        .gallery_head{
+          margin: auto;
+          width: max-content;
+        }
+
+      }
+     
     </style>
   </section>
   <section id="trainers" class="trainers">
@@ -241,7 +260,7 @@
         <div class="col-lg-9 c0l-md-6 d-flex justify-content-center align-items-center" style="border-bottom: solid 2px #5fcf80;">
           <div class="member_outer">
             <i class="fa-sharp fa-solid fa-quote-left"></i>
-            <p style="margin-left: 30px; font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut impedit tempore veritatis ut nam ullam.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut impedit tempore veritatis ut nam ullam </p>
+            <p style="margin-left: 30px; " class="tought_c">&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut impedit tempore veritatis ut nam ullam.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut impedit tempore veritatis ut nam ullam </p>
             <i class="fa-sharp fa-solid fa-quote-right" style="width: max-content; margin-left: 100%;"></i>
           </div>
         </div>
@@ -249,7 +268,19 @@
       </div>
 
     </div>
+    <style>
+      .member_outer p{
+        font-size: 28px;
+      }
+      @media (max-width: 460px) {
+        .member_outer p{
+          font-size: 15px;
+        }
+      }
+  
+    </style>
   </section>
+  
 </main>
 
 {% endblock content %}
