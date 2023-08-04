@@ -1,7 +1,4 @@
-{% extends 'base.html' %}
-
-{% load static %}
-{% block content %}
+{% extends 'base.html' %} {% load static %} {% block content %}
 
 <main id="main">
   <!-- ======= Breadcrumbs ======= -->
@@ -13,91 +10,120 @@
   </div>
 
   <!-- ======= About Section ======= -->
-  <section id="about" class="about" style="padding: 20px 20px;">
+  <section id="about" class="about" style="padding: 20px 20px">
     <div class="container" data-aos="fade-up">
-
       <div class="row">
-        <div class="col-lg-6 order-1 order-lg-2 d-flex align-items-center justify-content-center" data-aos="fade-left" data-aos-delay="100">
-          <img src="{% static 'assets/img/first2.png' %}" class="img-fluid" alt="" style="max-width: 80%; height: auto;">
+        <div
+          class="col-lg-6 order-1 order-lg-2 d-flex align-items-center justify-content-center"
+          data-aos="fade-left"
+          data-aos-delay="100"
+        >
+          <img
+            src="{% static 'assets/img/first2.png' %}"
+            class="img-fluid animate"
+            alt=""
+            style="max-width: 80%; height: auto"
+          />
         </div>
         <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
           <h3>Sullamussalam Science College Library</h3>
-          <hr>
+          <hr />
           <p class="fst-italic">
-            The college library, started 1996, situated in the central part of the campus is one among fully automated
-            notable libraries focused on quality based collection and best services in Kerala. The Library is a member
-            in the N-list Programme under INFLIBNET. Including the Digital Library all functions of the library is
-            developed in the light of S.R Ranganathan`s theory of `Five Laws of Library Science`. All days except
-            sundays and public holidays are working days from 8.30am to 5.00pm.
-            The Digital Library is available in the all Departments of the College, Women Resource Centre, Computer Labs
-            and Language Lab through Campus Network . Separate sections are arranged for the users especially in
-            Reference Service, Career Guidance Corner, Comparative Religion, Bound volumes of the Journals, CD Bank,
-            Question Bank, Subject Books.
+            The college library, started 1996, situated in the central part of
+            the campus is one among fully automated notable libraries focused on
+            quality based collection and best services in Kerala. The Library is
+            a member in the N-list Programme under INFLIBNET. Including the
+            Digital Library all functions of the library is developed in the
+            light of S.R Ranganathan`s theory of `Five Laws of Library Science`.
+            All days except sundays and public holidays are working days from
+            8.30am to 5.00pm. The Digital Library is available in the all
+            Departments of the College, Women Resource Centre, Computer Labs and
+            Language Lab through Campus Network . Separate sections are arranged
+            for the users especially in Reference Service, Career Guidance
+            Corner, Comparative Religion, Bound volumes of the Journals, CD
+            Bank, Question Bank, Subject Books.
           </p>
-          <ul >
-            <li ><i class="bi bi-check-circle"></i> Solar Power backup</li>
+          <ul>
+            <li><i class="bi bi-check-circle"></i> Solar Power backup</li>
             <li><i class="bi bi-check-circle"></i> Video Surveillance</li>
-            <li><i class="bi bi-check-circle"></i> Reprographic Service
-            </li>
-            <li><i class="bi bi-check-circle"></i> Water Purifier
-            </li>
-            <li><i class="bi bi-check-circle"></i> Ramp for disabled
-            </li>
+            <li><i class="bi bi-check-circle"></i> Reprographic Service</li>
+            <li><i class="bi bi-check-circle"></i> Water Purifier</li>
+            <li><i class="bi bi-check-circle"></i> Ramp for disabled</li>
           </ul>
-
         </div>
       </div>
 
-      <div class="row" style="display: flex; flex-direction: row-reverse;">
-        
-        <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content"data-aos="fade-left" data-aos-delay="100">
+      <div class="row" style="display: flex; flex-direction: row-reverse">
+        <div
+          class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content"
+          data-aos="fade-left"
+          data-aos-delay="100"
+        >
           <h3>Library rules</h3>
-          <hr>
-          <ul class="rules_li" >
-            <li style="list-style-position: outside;">  
-              <i class="fa-sharp fa-regular fa-circle-dot"></i>Library is kept open from 8:30 am to 5.00 pm on all working days including Saturdays
+          <hr />
+          <ul class="rules_li">
+            <li style="list-style-position: outside">
+              <i class="fa-sharp fa-regular fa-circle-dot"></i>Library is kept
+              open from 8:30 am to 5.00 pm on all working days including
+              Saturdays
             </li>
-            <li style="list-style-position: outside;" >             
+            <li style="list-style-position: outside">
               <i class="fa-sharp fa-regular fa-circle-dot"></i>
               All students and staff are entitled to membership in the library
             </li>
             <li>
               <i class="fa-sharp fa-regular fa-circle-dot"></i>
-              They have to submit an application in the prescribed form to avail of this privilege
-
+              They have to submit an application in the prescribed form to avail
+              of this privilege
             </li>
-            <li>             <i class="fa-sharp fa-regular fa-circle-dot"></i>
-              The members have to keep the library cards issued to them carefully and produce them at the time of borrowing books
+            <li>
+              <i class="fa-sharp fa-regular fa-circle-dot"></i>
+              The members have to keep the library cards issued to them
+              carefully and produce them at the time of borrowing books
             </li>
-            <li>             <i class="fa-sharp fa-regular fa-circle-dot"></i>
-              Borrowed books have to be returned to the library within 14 days, falling which the members will have to pay a fine of Rs.1 per day.
+            <li>
+              <i class="fa-sharp fa-regular fa-circle-dot"></i>
+              Borrowed books have to be returned to the library within 14 days,
+              falling which the members will have to pay a fine of Rs.1 per day.
             </li>
-            <li>             <i class="fa-sharp fa-regular fa-circle-dot"></i>
-              Books and other articles in the library must be handled very carefully
+            <li>
+              <i class="fa-sharp fa-regular fa-circle-dot"></i>
+              Books and other articles in the library must be handled very
+              carefully
             </li>
-            <li>             <i class="fa-sharp fa-regular fa-circle-dot"></i>
-              The damage or loss of these is to be compensated as per the Govt. Order
+            <li>
+              <i class="fa-sharp fa-regular fa-circle-dot"></i>
+              The damage or loss of these is to be compensated as per the Govt.
+              Order
             </li>
-            <li>             <i class="fa-sharp fa-regular fa-circle-dot"></i>
-              Students must return library cards to the library before they claim their hall tickets for the final semester examination
+            <li>
+              <i class="fa-sharp fa-regular fa-circle-dot"></i>
+              Students must return library cards to the library before they
+              claim their hall tickets for the final semester examination
             </li>
-            <li>             <i class="fa-sharp fa-regular fa-circle-dot"></i>
-              Clearance from the library is to be attained before applying
-              for transfer certificates.</li>
-
+            <li>
+              <i class="fa-sharp fa-regular fa-circle-dot"></i> Clearance from
+              the library is to be attained before applying for
+              transfer certificates.
+            </li>
           </ul>
-
         </div>
-        <div class="col-lg-6 order-1 order-lg-2 ab_img" data-aos="fade-right" data-aos-delay="100">
-          <img src="{% static 'assets/img/man2.png' %}" class="img-fluid rules_img" alt="" style="max-width: 70%; height: auto;">
+        <div
+          class="col-lg-6 order-1 order-lg-2 ab_img"
+          data-aos="fade-right"
+          data-aos-delay="100"
+        >
+          <img
+            src="{% static 'assets/img/man2.png' %}"
+            class="img-fluid rules_img animate"
+            alt=""
+            style="max-width: 70%; height: auto"
+          />
         </div>
       </div>
-
-
     </div>
-
-  </section><!-- End About Section -->
-  
+  </section>
+  <!-- End About Section -->
 </main>
 
 {% endblock content %}
