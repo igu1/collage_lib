@@ -376,8 +376,17 @@
 
     
     
-   
+    .about .content ul li{
+      padding-bottom: 0px;
+    }
 
+    .icon-boxes h2{
+      text-align: center;
+    }
+    .span_d{
+      color: rgb(121, 0, 121);
+      font-weight: bold;
+    }
 @media (max-width: 460px) {
     #hero .hero_btn{
     display: none;
