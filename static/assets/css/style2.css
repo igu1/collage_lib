@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Lumanosimo&display=swap');
-
 *{
     padding: 0;
     margin: 0;
@@ -12,6 +11,7 @@
     margin: auto;
     margin-bottom: 40px;
 }
+
 
 .member_outer{
     font-size: 25px;
@@ -73,6 +73,9 @@
 }
 .animate{
     animation: move 2s ease-in-out infinite alternate-reverse both;
+}
+.watch_bt{
+  height: 49px;
 }
 @keyframes move{
 0%{
@@ -387,6 +390,8 @@
       color: rgb(121, 0, 121);
       font-weight: bold;
     }
+
+
 @media (max-width: 460px) {
     #hero .hero_btn{
     display: none;
@@ -401,6 +406,11 @@
    .trainers .first_content::before{
     display: none;
    }
-
+   .watch_bt{
+    position: absolute;
+    right: 6%;
+    top: -79%;
+    height:auto;
+   }
    
 }
