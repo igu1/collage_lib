@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-ym88x)bzx(0t@b7qkxc1#*8e-52nbj)+$#6x+dijomjs)6fdip
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', '.ngrok-free.app']
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', '.ngrok-free.app', '157.230.42.75', 'library.sscollege.ac.in']
 
 
 # Application definition
@@ -72,7 +72,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'core_library.wsgi.app'
+WSGI_APPLICATION = 'core_library.wsgi.application'
 
 
 # Database
@@ -122,13 +122,13 @@ USE_I18N = True
 
 USE_TZ = True
 
-STATIC_URL = 'static/'
+STATIC_URL = '/assets/'
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = BASE_DIR / 'assets'
 
 STATICFILES_DIRS = [
     BASE_DIR / "static",
