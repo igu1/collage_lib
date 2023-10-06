@@ -149,25 +149,16 @@
   <section id="counts" class="counts section-bg" data-aos="zoom-in-up">
     <div class="container">
 
-      <div class="row counters">
+      <div class="d-flex justify-content-around counters">
 
-        <div class="col-lg-4 col-4 text-center">
-          <span data-purecounter-start="0" data-purecounter-end="22709" data-purecounter-duration="1"
-            class="purecounter"></span>
-          <p>Books</p>
-        </div>
-
-        <div class="col-lg-4 col-4 text-center">
-          <span data-purecounter-start="0" data-purecounter-end="1190" data-purecounter-duration="1"
-            class="purecounter"></span>
-          <p>Users</p>
-        </div>
-
-        <div class="col-lg-4 col-4 text-center">
-          <span data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="1"
-            class="purecounter"></span>
-          <p>N-list members</p>
-        </div>
+      {% for x in numberic_data %}
+      <div class="col-lg-4 col-4 text-center">
+        <span data-purecounter-start="0" data-purecounter-end="{{x.count}}" data-purecounter-duration="1"
+          class="purecounter"></span>
+        <p>{{x.name}}</p>
+      </div>
+      {% endfor %}
+  
       </div>
 
     </div>
@@ -303,33 +294,12 @@
       <h1 style="color: #5fcf80; font-weight: bold;" class="gallery_head">Gallery</h1>
       <hr>
       <div class="row gallary_img">
-        <a href="{% static 'assets/img/gallery/IMG_3415.jpg' %}"  data-toggle="lightbox" data-gallery="gallery"
+        {% for x in gallery %}
+        <a href="{{x.image.url}}"  data-toggle="lightbox" data-gallery="gallery"
           class="col-md-4">
-          <img src="{% static 'assets/img/gallery/IMG_3415.jpg' %}" class="img-fluid rounded">
+          <img src="{{x.image.url}}" class="img-fluid rounded">
         </a>
-        <a href="{% static 'assets/img/gallery/IMG_3399.jpg' %}" data-toggle="lightbox" data-gallery="gallery"
-          class="col-md-4">
-          <img src="{% static 'assets/img/gallery/IMG_3399.jpg' %}" class="img-fluid rounded">
-        </a>
-        <a href="{% static 'assets/img/gallery/IMG_3400.jpg' %}" data-toggle="lightbox" data-gallery="gallery"
-          class="col-md-4">
-          <img src="{% static 'assets/img/gallery/IMG_3400.jpg' %}" class="img-fluid rounded">
-        </a>
-      </div>
-      <div class="row">
-        <a href="{% static 'assets/img/gallery/IMG_3401.JPG' %}" data-toggle="lightbox" data-gallery="gallery"
-          class="col-md-4">
-          <img src="{% static 'assets/img/gallery/IMG_3401.JPG' %}" class="img-fluid rounded">
-        </a>
-        <a href="{% static 'assets/img/gallery/IMG_3402.jpg' %}" data-toggle="lightbox" data-gallery="gallery"
-          class="col-md-4">
-          <img src="{% static 'assets/img/gallery/IMG_3402.jpg' %}" class="img-fluid rounded">
-        </a>
-        <a href="{% static 'assets/img/gallery/IMG_3404.jpg' %}" data-toggle="lightbox" data-gallery="gallery"
-          class="col-md-4">
-          <img src="{% static 'assets/img/gallery/IMG_3404.jpg' %}" class="img-fluid rounded">
-        </a>
-        <div class="col-lg-12  btn_outer"><a href="{% url 'gallery' %}"><button class="gallery_bttn">View more</button></a></div>
+        {% endfor %}
       </div>
     </div>
     <script>
@@ -357,17 +327,17 @@
       <div class="row" data-aos="zoom-in" data-aos-delay="100" style="display: flex; flex-direction: row;">
         <div class="col-lg-3 col-md-6 d-flex align-items-stretch justify-content-center" style="border-top: solid 2px #5fcf80;">
           <div class="member" style="margin-top: 30px;">
-            <img src="{% static 'assets/img/trainers/abdulkader.jpg' %}" class="img-fluid" alt="">
+            <img src="{{main_quote.image.url}}" class="img-fluid" alt="">
             <div class="member-content">
-              <h4>ABDUL KADER KM </h4>
-              <span>Librarian</span>
+              <h4>{{main_quote.name}} </h4>
+              <span>{{main_quote.position}}</span>
             </div>
           </div>
         </div>
         <div class="col-lg-9 c0l-md-6 d-flex justify-content-center align-items-center" style="border-bottom: solid 2px #5fcf80;">
           <div class="member_outer">
             <i class="fa-sharp fa-solid fa-quote-left"></i>
-            <p style="margin-left: 30px; " class="tought_c">&nbsp;&nbsp;&nbsp;&nbsp;Books are the keys to knowledge, and the college library is the treasure chest of endless discoveries. </p>
+            <p style="margin-left: 30px; " class="tought_c">{{main_quote.quote}}</p>
             <i class="fa-sharp fa-solid fa-quote-right" style="width: max-content; margin-left: 100%;"></i>
           </div>
         </div>

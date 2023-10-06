@@ -1,13 +1,13 @@
 from django.db import models
-from django.core.exceptions import ValidationError
-from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.forms import ModelForm
-
+from imagekit.models import ProcessedImageField
+from imagekit.processors import ResizeToFill
 
 class Member(models.Model):
     name = models.CharField(max_length=100)
+    main = models.BooleanField(default=False)
     position = models.CharField(max_length=100)
     image = models.ImageField(max_length=2048, upload_to='gallery')
     def __str__(self):
@@ -27,29 +27,24 @@ class MessageForm(ModelForm):
         model = Message
         fields = ['name', 'email', 'subject', 'message']
     
-class NumberOfBooks(models.Model):
+class NumericData(models.Model):
+    name = models.CharField(max_length=100)
     count = models.IntegerField(default=0)
-
-    def save(self, *args, **kwargs):
-        if NumberOfBooks.objects.exists() and self.pk is None:
-            alert_message = "Only one instance of Number Of Book is allowed."
-            return HttpResponseRedirect(reverse("admin:index") + f"?alert={alert_message}")
-        return super().save(*args, **kwargs)
-
-    @classmethod
-    def get_instance(cls):
-        if NumberOfBooks.objects.exists():
-            return NumberOfBooks.objects.first()
-        return NumberOfBooks.objects.create()
-
+    
     def __str__(self):
-        return f"Books: {self.count}"
+        return f"{self.name}: {self.count}"
 
     class Meta:
-        verbose_name_plural = "Number Of Books"
+        verbose_name_plural = "NumericDatas"
         
 class Quote(models.Model):
-    quote = models.CharField(default="Discover the magic of books at our library, where imagination knows no bounds", blank=True, max_length=2048)
+    name = models.CharField(max_length=100)
+    position = models.CharField(max_length=100)
+    image = ProcessedImageField(upload_to='quote',
+                                           processors=[ResizeToFill(200, 300)],
+                                           format='PNG',
+                                           options={'quality': 100}, null=True)                                
+    quote = models.CharField(default="No Quote Given", blank=True, max_length=2048)
 
     def save(self, *args, **kwargs):
         if Quote.objects.exists() and self.pk is None:
@@ -71,6 +66,14 @@ class Quote(models.Model):
         
 class Gallery(models.Model):
     title = models.CharField(max_length=100)
-    image = models.ImageField(upload_to='gallery')
+    image = ProcessedImageField(upload_to='gallery',
+                                           processors=[ResizeToFill(1920, 1080)],
+                                           format='PNG',
+                                           options={'quality': 100}, null=True)
+    main = models.BooleanField(default=False)
+    date = models.DateTimeField(auto_now_add=True)
     def __str__(self):
         return self.title
+    
+    class Meta:
+        verbose_name_plural = "Gallery"

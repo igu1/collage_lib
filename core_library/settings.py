@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'library',
-    'rest_framework'
+    'rest_framework',
+    'imagekit'
 ]
 
 MIDDLEWARE = [
@@ -77,7 +78,7 @@ WSGI_APPLICATION = 'core_library.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-if os.environ.get("TYPE") == "LOCAL":
+if DEBUG:
     DATABASES = {
        'default': {
            'ENGINE': 'django.db.backends.sqlite3',
