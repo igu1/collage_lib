@@ -67,9 +67,8 @@ class Quote(models.Model):
 class Gallery(models.Model):
     title = models.CharField(max_length=100)
     image = ProcessedImageField(upload_to='gallery',
-                                           processors=[ResizeToFill(1920, 1080)],
                                            format='PNG',
-                                           options={'quality': 100}, null=True)
+                                           options={'quality': 50}, null=True)
     main = models.BooleanField(default=False)
     date = models.DateTimeField(auto_now_add=True)
     def __str__(self):
