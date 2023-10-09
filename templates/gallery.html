@@ -1,80 +1,31 @@
-{% extends 'base.html' %}
-
-{% load static %}
-{% block content %}
+{% extends 'base.html' %} {% load static %} {% block content %}
 
 <main id="main">
-    <!-- ======= Breadcrumbs ======= -->
-    <div class="breadcrumbs" data-aos="fade-in">
-      <div class="container">
-        <h2>Gallery</h2>
-        <p>Sullamussalam Science College Areekode</p>
-      </div>
-    </div>
-    <section class="gallary" id="gallary" >
-        <div class="container">
-  <div class="row">
-    <div class="col-lg-4 col-md-12 mb-4 mb-lg-0" data-aos="fade-right" data-aos-delay="100">
-    <a href="{% static 'assets/img/gallery/IMG_3391.jpg' %}">
-      <img
-        src="{% static 'assets/img/gallery/IMG_3391.jpg' %}"
-        class="w-100 shadow-1-strong rounded mb-4"
-      />
-    </a>
-    </a href="{% static 'assets/img/gallery/p2.jpg' %}">
-      <img
-        src="{% static 'assets/img/gallery/p2.jpg' %}"
-        class="w-100 shadow-1-strong rounded mb-4"
-      />
-    </a>
-    </div>
-  
-    <div class="col-lg-4 mb-4 mb-lg-0" data-aos="zoom-in" data-aos-delay="100">
-      <a href="{% static 'assets/img/gallery/p4.jpg' %}">
-      <img
-        src="{% static 'assets/img/gallery/p4.jpg' %}"
-        class="w-100 shadow-1-strong rounded mb-4"
-      />
-     </a>
-     <a href="{% static 'assets/img/gallery/IMG_3412.jpg' %}">
-      <img
-        src="{% static 'assets/img/gallery/IMG_3412.jpg' %}"
-        class="w-100 shadow-1-strong rounded mb-4"
-      />
-     </a>
-    </div>
-  
-    <div class="col-lg-4 mb-4 mb-lg-0" data-aos="fade-left" data-aos-delay="100">
-      <a href="{% static 'assets/img/gallery/IMG_3411.jpg' %}">
-      <img
-        src="{% static 'assets/img/gallery/IMG_3411.jpg' %}"
-        class="w-100 shadow-1-strong rounded mb-4"
-      />
-    </a>
-    <a href="{% static 'assets/img/gallery/IMG_3386.jpg' %}">
-      <img
-        src="{% static 'assets/img/gallery/IMG_3386.jpg' %}"
-        class="w-100 shadow-1-strong rounded mb-4"
-      />
-    </a>
+  <!-- ======= Breadcrumbs ======= -->
+  <div class="breadcrumbs" data-aos="fade-in">
+    <div class="container">
+      <h2>Gallery</h2>
+      <p>Sullamussalam Science College Areekode</p>
     </div>
   </div>
-  <div class="row" data-aos="zoom-in" data-aos-delay="100">
-      
-      {% for x in gallery %}
-      <a href="{{x.image.url}}"  data-toggle="lightbox" data-gallery="gallery"
-        class="col-md-4">
-        <img src="{{x.image.url}}" class="img-fluid rounded">
-      </a>
-      {% endfor %}
-        
-  </div> 
- 
-  <!-- Gallery -->
+  <section class="gallary" id="gallary">
+    <div class="container">
+      <div class="row" data-aos="zoom-in" data-aos-delay="100">
+        {% for x in gallery %}
+        <a
+          href="{{x.image.url}}"
+          data-toggle="lightbox"
+          data-gallery="gallery"
+          class="col-md-4"
+        >
+          <img src="{{x.image.url}}" class="img-fluid rounded" />
+        </a>
+        {% endfor %}
+      </div>
 
-          </div>
-    </section>
-
+      <!-- Gallery -->
+    </div>
+  </section>
 </main>
 
 {% endblock content %}
